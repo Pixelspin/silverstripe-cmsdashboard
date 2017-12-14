@@ -1,0 +1,12 @@
+---
+Name: cmsdashboard
+After:
+  - 'cmsdefaultadmin'
+---
+
+SilverStripe\Core\Manifest\ModuleManifest:
+  module_priority:
+    - pixelspin/silverstripe-cmsdashboard
+
+SilverStripe\Admin\AdminRootController:
+  default_panel: Pixelspin\CMSDashboard\Admin\Dashboard

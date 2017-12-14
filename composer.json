@@ -1,0 +1,39 @@
+{
+    "name": "thewebmen/silverstripe-cmsdashboard",
+    "description": "Dashboard for the silverstrip CMS",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "dashboard",
+        "cms"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Michel van der Steege",
+        "email": "michel@thewebmen.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "silverstripe/cms": "^4.0@dev",
+        "silverstripe/vendor-plugin": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "extra": {
+        "installer-name": "silverstripe-cmsdashboard",
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+        "expose": [
+            "resources"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Pixelspin\\CMSDashboard\\": "src/"
+        }
+    }
+}
