@@ -22,7 +22,7 @@
                 <div class="col-md-4">
                     <div class="dashboard-panel">
                         <div class="dashboard-panel-title">
-                            Title
+                            <span class="font-icon-monitor"></span> Title
                         </div>
                         <div class="dashboard-panel-content dashboard-panel-content-padded">
                             <p>
@@ -38,7 +38,7 @@
                 <div class="col-md-4">
                     <div class="dashboard-panel">
                         <div class="dashboard-panel-title">
-                            Title
+                            <span class="font-icon-monitor"></span> Title
                         </div>
                         <div class="dashboard-panel-content">
                             <table>
@@ -67,7 +67,7 @@
                 <div class="col-md-4">
                     <div class="dashboard-panel">
                         <div class="dashboard-panel-title">
-                            Title
+                            <span class="font-icon-monitor"></span> Title
                         </div>
                         <div class="dashboard-panel-content dashboard-panel-content-padded">
                             Content here

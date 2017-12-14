@@ -1,6 +1,6 @@
 .dashboard-panel {
     background: #fff;
-    border: 1px solid #e7e9ec;
+    border: 1px solid #c1c7cc;
 }
 
 .dashboard-panel-title {
@@ -21,8 +21,5 @@
 .dashboard-panel-content table td,
 .dashboard-panel-content table th {
     padding: 10px;
-}
-
-.dashboard-panel-content table tr:nth-child(odd) {
-    background-color: #f0f2f4;
+    border-bottom: 1px solid #e7e9ec;
 }
