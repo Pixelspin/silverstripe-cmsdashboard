@@ -1,5 +1,5 @@
 {
-    "name": "thewebmen/silverstripe-cmsdashboard",
+    "name": "pixelspin/silverstripe-cmsdashboard",
     "description": "Dashboard for the silverstrip CMS",
     "type": "silverstripe-vendormodule",
     "keywords": [
