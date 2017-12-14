@@ -3,6 +3,7 @@
 namespace Pixelspin\CMSDashboard\Admin;
 
 use SilverStripe\Admin\LeftAndMain;
+use SilverStripe\View\Requirements;
 
 class Dashboard extends LeftAndMain {
 
@@ -14,8 +15,8 @@ class Dashboard extends LeftAndMain {
 
     public function init()
     {
-        return parent::init();
         Requirements::css('pixelspin/silverstripe-cmsdashboard:resources/css/dashboard.css');
+        return parent::init();
     }
 
 }

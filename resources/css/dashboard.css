@@ -1,3 +1,28 @@
-#dashboard {
-    padding: 20px 0 0 0;
+.dashboard-panel {
+    background: #fff;
+    border: 1px solid #e7e9ec;
+}
+
+.dashboard-panel-title {
+    background: #e9f0f4;
+    border-bottom: 1px solid #e7e9ec;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.dashboard-panel-content-padded {
+    padding: 10px;
+}
+
+.dashboard-panel-content table {
+    width: 100%;
+}
+
+.dashboard-panel-content table td,
+.dashboard-panel-content table th {
+    padding: 10px;
+}
+
+.dashboard-panel-content table tr:nth-child(odd) {
+    background-color: #f0f2f4;
 }
