@@ -3,7 +3,9 @@
 namespace Pixelspin\CMSDashboard\Admin;
 
 use SilverStripe\Admin\LeftAndMain;
+use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\Requirements;
+use SilverStripe\Core\ClassInfo;
 
 class Dashboard extends LeftAndMain {
 
@@ -17,6 +19,18 @@ class Dashboard extends LeftAndMain {
     {
         Requirements::css('pixelspin/silverstripe-cmsdashboard:resources/css/dashboard.css');
         return parent::init();
+    }
+
+    public function Panels(){
+        $panels = new ArrayList();
+        $panelClasses = ClassInfo::subclassesFor(DashboardPanel::class);
+        foreach($panelClasses as $panelClass){
+            if($panelClass == DashboardPanel::class){
+                continue;
+            }
+            $panels->push(new $panelClass());
+        }
+        return $panels;
     }
 
 }

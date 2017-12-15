@@ -19,61 +19,9 @@
          data-layout-type="border">
         <div class="panel--padded">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="dashboard-panel">
-                        <div class="dashboard-panel-title">
-                            <span class="font-icon-monitor"></span> Title
-                        </div>
-                        <div class="dashboard-panel-content dashboard-panel-content-padded">
-                            <p>
-                                Pellentesque a consequat leo. Maecenas vehicula nibh in ipsum dapibus, ac congue diam
-                                finibus. Duis ac ullamcorper mauris. Mauris ex tellus, elementum vulputate convallis sit
-                                amet, bibendum ac massa. Praesent nec dignissim sem. Curabitur eu eros eget nisi commodo
-                                luctus. In sit amet ultricies purus. Pellentesque habitant morbi tristique senectus et
-                                netus et malesuada fames ac turpis egestas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="dashboard-panel">
-                        <div class="dashboard-panel-title">
-                            <span class="font-icon-monitor"></span> Title
-                        </div>
-                        <div class="dashboard-panel-content">
-                            <table>
-                                <tr>
-                                    <th>Heading</th>
-                                    <td>Col 1</td>
-                                    <td>Col 2</td>
-                                    <td>Col 3</td>
-                                </tr>
-                                <tr>
-                                    <th>Heading</th>
-                                    <td>Col 1</td>
-                                    <td>Col 2</td>
-                                    <td>Col 3</td>
-                                </tr>
-                                <tr>
-                                    <th>Heading</th>
-                                    <td>Col 1</td>
-                                    <td>Col 2</td>
-                                    <td>Col 3</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="dashboard-panel">
-                        <div class="dashboard-panel-title">
-                            <span class="font-icon-monitor"></span> Title
-                        </div>
-                        <div class="dashboard-panel-content dashboard-panel-content-padded">
-                            Content here
-                        </div>
-                    </div>
-                </div>
+                <% loop $Panels %>
+                    $Me
+                <% end_loop %>
             </div>
         </div>
     </div>
