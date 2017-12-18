@@ -24,11 +24,23 @@ class Dashboard extends LeftAndMain {
     public function Panels(){
         $panels = new ArrayList();
         $panelClasses = ClassInfo::subclassesFor(DashboardPanel::class);
+        $panelsList = [];
         foreach($panelClasses as $panelClass){
             if($panelClass == DashboardPanel::class){
                 continue;
             }
-            $panels->push(new $panelClass());
+            $panel = new $panelClass();
+            $sort = $panel->getSort();
+            if(!array_key_exists($sort, $panelsList)){
+                $panelsList[$sort] = [];
+            }
+            $panelsList[$sort][] = $panel;
+        }
+        ksort($panelsList);
+        foreach($panelsList as $panelsArray){
+            foreach($panelsArray as $panel){
+                $panels->push($panel);
+            }
         }
         return $panels;
     }

@@ -8,6 +8,7 @@ class DashboardPanel extends ViewableData {
 
     private static $colClasses = 'col-md-4';
     private static $icon = '';
+    private static $sort = 50;
 
     public function forTemplate(){
         return $this->renderWith('Pixelspin\CMSDashboard\Admin\DashboardPanel');
@@ -28,6 +29,10 @@ class DashboardPanel extends ViewableData {
 
     public function getContent(){
         return 'Override the getContent method...';
+    }
+
+    public function getSort(){
+        return $this->config()->get('sort');
     }
 
 }
