@@ -1,6 +1,7 @@
 .dashboard-panel {
     background: #fff;
     border: 1px solid #c1c7cc;
+    margin-bottom: 20px;
 }
 
 .dashboard-panel-title {
