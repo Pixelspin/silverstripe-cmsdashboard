@@ -3,6 +3,7 @@
 namespace Pixelspin\CMSDashboard\Admin;
 
 use SilverStripe\Admin\LeftAndMain;
+use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\Requirements;
 use SilverStripe\Core\ClassInfo;
@@ -22,14 +23,18 @@ class Dashboard extends LeftAndMain {
     }
 
     public function Panels(){
+        $disabledPanels = Config::inst()->get(self::class, 'disabled_panels');
         $panels = new ArrayList();
         $panelClasses = ClassInfo::subclassesFor(DashboardPanel::class);
         $panelsList = [];
         foreach($panelClasses as $panelClass){
-            if($panelClass == DashboardPanel::class){
+            if($panelClass == DashboardPanel::class || ($disabledPanels && in_array($panelClass, $disabledPanels))){
                 continue;
             }
             $panel = new $panelClass();
+            if(!$panel->showPanel()){
+                continue;
+            }
             $sort = $panel->getSort();
             if(!array_key_exists($sort, $panelsList)){
                 $panelsList[$sort] = [];

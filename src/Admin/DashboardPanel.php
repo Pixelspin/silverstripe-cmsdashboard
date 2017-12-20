@@ -35,4 +35,8 @@ class DashboardPanel extends ViewableData {
         return $this->config()->get('sort');
     }
 
+    public function showPanel(){
+        return true;
+    }
+
 }
